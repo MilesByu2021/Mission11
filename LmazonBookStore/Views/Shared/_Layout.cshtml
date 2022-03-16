@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+          type="image/x-icon">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="bg-dark text-white p-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col navbar-brand">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">LMAZON</a>
+                    </div>
+
+                    <div class="col-6 text-right">
+                        <vc:cart-summary />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="row m-1 p-1">
+
+        <div id="types" class="col-3">
+            <vc:types></vc:types>
+        </div>
+
+        <div class="col-9">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - LMAZON BOOK STORE - <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+        </footer>
+</body>
+</html>

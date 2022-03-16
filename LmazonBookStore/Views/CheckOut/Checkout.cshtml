@@ -1,0 +1,61 @@
+﻿@{
+}
+
+@model CheckOut
+
+<h2>Thank you for shopping at Lmazon Book Store,
+    Please complete this checkout form to finalize your
+    order and receive your invoice!</h2>
+
+<form method="post" asp-controller="CheckOut" asp-action="Checkout">
+
+    <div asp-validation-summary="All" class="text-danger"> </div>
+
+    <h4>Ship To</h4>
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <h4>Address</h4>
+
+    <div class="form-group">
+        <label asp-for="AddressLine1">AddressLine 1</label>
+        <input asp-for="AddressLine1" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AddressLine2">AddressLine 2</label>
+        <input asp-for="AddressLine2" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AddressLine3">AddressLine 3</label>
+        <input asp-for="AddressLine3" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City">City</label>
+        <input asp-for="City" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="State">State</label>
+        <input asp-for="State" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Zip">Zip</label>
+        <input asp-for="Zip" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Country">Country</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+
+    <div class="float-end">
+        <input class="btm btn-primary" type="submit" value="Check Out"/>
+    </div>
+</form>
